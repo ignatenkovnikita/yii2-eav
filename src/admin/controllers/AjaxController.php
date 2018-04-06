@@ -59,11 +59,9 @@ class AjaxController extends Controller
                 try {
 
                     $categoryId = isset($post['categoryId'])? $post['categoryId']: 0;
+                    $entityId = isset($post['entityId'])? $post['entityId']: 0;
 
-                    $entityId = EavEntity::find()->select(['id'])->where(['entityModel' => $post['entityModel'],
-                                                                          'categoryId'  => $categoryId,])->scalar();
-
-                    if (!$entityId) {
+                    if (!$entityId || $entityId == 0) {
                         $entity = new EavEntity;
                         $entity->entityName = isset($post['entityName'])? $post['entityName']: 'Untitled';
                         $entity->entityModel = $post['entityModel'];

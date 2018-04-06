@@ -40,7 +40,7 @@ class RawValueHandler extends ValueHandler
         if (isset($EavModel->attributes[$attribute])) {
 
             $valueModel->value = $EavModel->attributes[$attribute];
-            if (!$valueModel->save()) {
+            if (!$valueModel->save(false)) {
                 throw new \Exception("Can't save value model");
             }
 

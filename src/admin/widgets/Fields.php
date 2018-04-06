@@ -18,6 +18,8 @@ class Fields extends Widget
     public $model;
 
     public $categoryId = 0;
+    
+    public $entityId = 0;
 
     public $entityModel;
 
@@ -74,6 +76,7 @@ class Fields extends Widget
             'url' => $this->url,
             'urlSave' => $this->urlSave,
             'categoryId' => isset($this->categoryId) ? $this->categoryId : 0,
+            'entityId' => isset($this->entityId) ? $this->entityId : 0,
             'entityModel' => $this->entityModel,
             'entityName' => $this->entityName,
             'bootstrapData' => $this->bootstrapData,

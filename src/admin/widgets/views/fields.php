@@ -25,7 +25,8 @@ $js_form_builder = <<<JS
         url: '$urlSave',
         type: 'post',
         data: {
-          categoryId: $categoryId, 
+          categoryId: $categoryId,
+		  entityId: '$entityId', 
           entityModel: '$entityModel', 
           entityName: '$entityName', 
           payload: payload, _csrf: yii.getCsrfToken()
