@@ -172,6 +172,7 @@ class AjaxController extends Controller
 
 
                     $transaction->commit();
+                    return $entityId;
 
                 }
                 catch (\Exception $e) {

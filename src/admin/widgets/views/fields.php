@@ -13,6 +13,10 @@ $path = FbAsset::register($this);
     <div class="form-builder fb-main">
     </div>
 <?php
+$response = "";
+if($returnEntityId){
+    $response = "$('#".$returnEntityId."').val(response)";
+}
 $js_form_builder = <<<JS
   $(function(){
     fb = new Formbuilder({
@@ -33,6 +37,7 @@ $js_form_builder = <<<JS
         },        
         dataType: 'json',
       }).success(function(response) {
+		$response
       });
     });
   });

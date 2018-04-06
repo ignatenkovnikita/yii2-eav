@@ -31,6 +31,8 @@ class Fields extends Widget
 
     private $rules = [];
 
+    public $returnEntityId = "";
+
     public function init()
     {
         parent::init();
@@ -80,6 +82,7 @@ class Fields extends Widget
             'entityModel' => $this->entityModel,
             'entityName' => $this->entityName,
             'bootstrapData' => $this->bootstrapData,
+            'returnEntityId' => $this->returnEntityId,
         ]);
     }
 }
